@@ -1,7 +1,5 @@
-import Image from 'next/image'
-
+import Image from "next/image";
+import HomePage from "../components/homePage/HomePage";
 export default function Home() {
-  return (
-   <h2>La rompemos pa</h2>
-  )
+  return <HomePage />;
 }
