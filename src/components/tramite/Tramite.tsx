@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { ChangeEvent, useState } from "react";
 import img1 from "../../assets/zyro-image(2).png";
 import img2 from "../../assets/zyro-image(3).png";
 import logo from "../../app/favicon.ico";
@@ -12,24 +12,17 @@ const Tramite = () => {
   const params = useParams();
   // console.log(params);
   const router = useRouter();
-  const [formData, setFormData] = useState({
-    email: "",
-    password: "",
-  });
+  const [formData, setFormData] = useState<string>('');
   const [select, setSelect] = useState("");
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(formData);
+    console.log(formData, ' ', select);
   };
-  // const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
-  //   const { name, value } = e.target;
-  //   setFormData((previous) => {
-  //     return { ...previous, [name]: value };
-  //   });
-  // };
-  const selectCard = (e: React.MouseEvent<HTMLElement>) => {
-    console.log(e);
-    // setSelect(e)
+  const handleInput = (e: ChangeEvent<HTMLTextAreaElement>) => {
+    setFormData(e.target.value);
+  };
+  const selectCard = (e: React.MouseEvent<HTMLButtonElement>) => {
+    setSelect(e.currentTarget.value)
   };
   return (
     <AnimatePresence mode="wait">
@@ -62,37 +55,38 @@ const Tramite = () => {
                   <button
                     value={"juicio"}
                     onClick={selectCard}
-                    className="flex items-center justify-center select-card w-1/3 h-full border-black border rounded-lg bg-gray-50 cursor-pointer hover:bg-white"
+                    className={`flex items-center justify-center select-card w-1/3 h-full  border rounded-lg bg-gray-50 cursor-pointer hover:bg-white ${select!='juicio' ? 'border-black text-black' : 'border-red-700 text-red-700'}`}
                   >
                     JUICIO
                   </button>
                   <button
                     value={"diligencia"}
                     onClick={selectCard}
-                    className="flex items-center justify-center select-card w-1/3 h-full border-black border rounded-lg bg-gray-50 cursor-pointer hover:bg-white"
+                    className={`flex items-center justify-center select-card w-1/3 h-full border rounded-lg bg-gray-50 cursor-pointer hover:bg-white ${select!='diligencia' ? 'border-black text-black' : 'border-red-700 text-red-700'}`}
                   >
                     DILIGENCIA
                   </button>
                   <button
                     value={"none"}
                     onClick={selectCard}
-                    className="flex items-center justify-center select-card w-1/3 h-full border-black border rounded-lg bg-gray-50 cursor-pointer hover:bg-white"
+                    className={`flex items-center justify-center select-card w-1/3 h-full border rounded-lg bg-gray-50 cursor-pointer hover:bg-white ${select!='none' ? 'border-black text-black' : 'border-red-700 text-red-700'}`}
                   >
                     NONE
                   </button>
                 </div>
-
-                <textarea
-                  className="resize-y max-h-96 min-h-20 mt-2 p-2 w-full bg-gray-50 border border-gray-300 rounded-md"
-                  name="password"
-                  id="bio"
-                ></textarea>
-                <button
-                  type="submit"
-                  className="rounded-md h-9 bg-red-700 text-white font-semibold"
-                >
-                  Enviar consulta
-                </button>
+                <form onSubmit={onSubmit}>
+                  <textarea
+                    className="resize-y max-h-96 min-h-20 my-2 p-2 w-full bg-gray-50 border border-gray-300 rounded-md"
+                    value={formData}
+                    onChange={handleInput}
+                  ></textarea>
+                  <button
+                    type="submit"
+                    className="rounded-md h-9 w-40 bg-red-700 text-white font-semibold"
+                  >
+                    Enviar consulta
+                  </button>
+                </form>
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
