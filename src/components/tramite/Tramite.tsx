@@ -21,12 +21,12 @@ const Tramite = () => {
     e.preventDefault();
     console.log(formData);
   };
-  const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData((previous) => {
-      return { ...previous, [name]: value };
-    });
-  };
+  // const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+  //   const { name, value } = e.target;
+  //   setFormData((previous) => {
+  //     return { ...previous, [name]: value };
+  //   });
+  // };
   const selectCard = (e: React.MouseEvent<HTMLElement>) => {
     console.log(e);
     // setSelect(e)
@@ -58,36 +58,28 @@ const Tramite = () => {
                   posible.
                 </p>
               </div>
-
-              <form
-                onSubmit={onSubmit}
-                className="flex flex-col justify-center align-middle text-center gap-4"
-              >
                 <div className="flex flex-row w-full h-20 gap-2">
-                  <input
-                    type="checkbox"
+                  <button
                     value={"juicio"}
                     onClick={selectCard}
                     className="flex items-center justify-center select-card w-1/3 h-full border-black border rounded-lg bg-gray-50 cursor-pointer hover:bg-white"
                   >
-                    <label>JUICIO</label>
-                  </input>
-                  <input
-                    type="checkbox"
+                    JUICIO
+                  </button>
+                  <button
                     value={"diligencia"}
                     onClick={selectCard}
                     className="flex items-center justify-center select-card w-1/3 h-full border-black border rounded-lg bg-gray-50 cursor-pointer hover:bg-white"
                   >
                     DILIGENCIA
-                  </input>
-                  <input
-                    type="checkbox"
+                  </button>
+                  <button
                     value={"none"}
                     onClick={selectCard}
                     className="flex items-center justify-center select-card w-1/3 h-full border-black border rounded-lg bg-gray-50 cursor-pointer hover:bg-white"
                   >
                     NONE
-                  </input>
+                  </button>
                 </div>
 
                 <textarea
@@ -110,7 +102,6 @@ const Tramite = () => {
                 >
                   <Image src={logo} width={70} height={70} alt="logo" />
                 </motion.div>
-              </form>
             </div>
           </motion.div>
         </div>
