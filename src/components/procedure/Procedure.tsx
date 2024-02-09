@@ -8,7 +8,7 @@ import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const Tramite = () => {
+const Procedure = () => {
   const params = useParams();
   // console.log(params);
   const router = useRouter();
@@ -106,4 +106,4 @@ const Tramite = () => {
   );
 };
 
-export default Tramite;
+export default Procedure;

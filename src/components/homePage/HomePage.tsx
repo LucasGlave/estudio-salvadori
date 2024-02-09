@@ -2,11 +2,14 @@
 import React, { useEffect, useRef, useState } from 'react';
 import img1 from '../../assets/zyro-image(2).png';
 import img2 from '../../assets/wesley-tingey-KJgkqQcdynQ-unsplash.jpg';
-import bsas from '../../assets/buenos-aires.webp';
+import sanLuis from '../../assets/san-luis.jpeg';
 import bsas2 from '../../assets/buenosaires.jpg';
 import neuquen from '../../assets/neuquen.jpg';
 import cordoba from '../../assets/cordoba.jpg';
-import laPampa from '../../assets/santa-rosa.jpg';
+import laPampa from '../../assets/la-pampa.jpeg';
+import laPampa2 from '../../assets/la-pampa2.jpeg';
+import laPampa3 from '../../assets/la-pampa3.jpeg';
+
 import logo from '../../app/favicon.ico';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
@@ -14,6 +17,7 @@ import Link from 'next/link';
 import { motion, useAnimation, useInView } from 'framer-motion';
 
 const HomePage = () => {
+  const router = useRouter()
   const animationControls1 = useAnimation();
   const ref1 = useRef(null);
   const inView1 = useInView(ref1);
@@ -58,6 +62,11 @@ const HomePage = () => {
     inView3,
     hasAnimated3,
   ]);
+
+  const handleProcedure = (jurisdiction:string) => {
+    router.push(`/${jurisdiction}`)
+  }
+
   return (
     <div className="flex flex-col w-full justify-center align-middle">
       <div className="flex justify-center h-2/6 p-10 z-10 bg-gradient-to-t from-white to-transparent">
@@ -122,7 +131,7 @@ const HomePage = () => {
               <Image src={laPampa} alt="bsas" className="object-cover rounded-md w-full" fill />
               <div className="flex flex-col justify-center items-center absolute bottom-0 left-0 w-full bg-transp p-4 gap-2">
                 <h3>La Pampa</h3>
-                <button className="bg-red-700 hover:bg-red-800 text-white font-bold py-1 px-4 rounded">
+                <button onClick={() => handleProcedure('la-pampa')} className="bg-red-700 hover:bg-red-800 text-white font-bold py-1 px-4 rounded">
                   Consultar
                 </button>
               </div>
@@ -131,16 +140,16 @@ const HomePage = () => {
               <Image src={cordoba} alt="bsas" className="object-cover rounded-md w-full" fill />
               <div className="flex flex-col justify-center items-center absolute bottom-0 left-0 w-full bg-transp p-4 gap-2">
                 <h3>Cordoba</h3>
-                <button className="bg-red-700 hover:bg-red-800 text-white font-bold py-1 px-4 rounded">
+                <button onClick={() => handleProcedure('cordoba')} className="bg-red-700 hover:bg-red-800 text-white font-bold py-1 px-4 rounded">
                   Consultar
                 </button>
               </div>
             </div>
             <div className="border border-gray-300 w-1/3 h-80 rounded-md relative overflow-hidden shadow-lg card">
-              <Image src={bsas} alt="bsas" className="object-cover rounded-md w-full" fill />
+              <Image src={sanLuis} alt="bsas" className="object-cover rounded-md w-full" fill />
               <div className="flex flex-col justify-center items-center absolute bottom-0 left-0 w-full bg-transp p-4 gap-2">
                 <h3>San Luis</h3>
-                <button className="bg-red-700 hover:bg-red-800 text-white font-bold py-1 px-4 rounded">
+                <button onClick={() => handleProcedure('san-luis')} className="bg-red-700 hover:bg-red-800 text-white font-bold py-1 px-4 rounded">
                   Consultar
                 </button>
               </div>
@@ -163,7 +172,7 @@ const HomePage = () => {
           >
             <div className="border border-gray-300 w-1/3 h-80 rounded-md relative overflow-hidden shadow-lg card">
               <Image src={neuquen} alt="neuquen" className="object-cover rounded-md w-full" fill />
-              <div className="flex flex-col justify-center items-center absolute bottom-0 left-0 w-full bg-transp p-4 gap-2">
+              <div onClick={() => handleProcedure('neuquen')} className="flex flex-col justify-center items-center absolute bottom-0 left-0 w-full bg-transp p-4 gap-2">
                 <h3>Neuquen</h3>
                 <button className="bg-red-700 hover:bg-red-800 text-white font-bold py-1 px-4 rounded">
                   Consultar
@@ -174,7 +183,7 @@ const HomePage = () => {
               <Image src={bsas2} alt="bsas" className="object-cover rounded-md w-full" fill />
               <div className="flex flex-col justify-center items-center absolute bottom-0 left-0 w-full bg-transp p-4 gap-2">
                 <h3>Buenos Aires</h3>
-                <button className="bg-red-700 hover:bg-red-800 text-white font-bold py-1 px-4 rounded">
+                <button onClick={() => handleProcedure('buenos-aires')} className="bg-red-700 hover:bg-red-800 text-white font-bold py-1 px-4 rounded">
                   Consultar
                 </button>
               </div>
