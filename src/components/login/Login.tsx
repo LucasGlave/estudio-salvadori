@@ -17,6 +17,7 @@ const Login = () => {
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log(formData);
+    router.push('/')
   };
   const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -47,7 +48,7 @@ const Login = () => {
             transition={{ duration: 1 }}
             className="flex items-center w-4/5 justify-center align-middle"
           >
-            <div className="flex flex-col h-7/8 w-full p-12 m-16 justify-center align-middle opacity-80 text-center border-spacing-12 border-8 border-white rounded-lg bg-white shadow-2xl shadow-gray-500">
+            <div className="flex flex-col h-7/8 w-full p-12 m-16 justify-center align-middle opacity-90 text-center border-spacing-12 border-8 border-white rounded-lg bg-white shadow-2xl shadow-gray-500">
               <h1 className="text-lg font-semibold font-montserrat mb-4">INICIO DE SESION</h1>
               <form
                 onSubmit={onSubmit}
@@ -61,7 +62,7 @@ const Login = () => {
                     onChange={handleInput}
                     placeholder="Email"
                     type="text"
-                    className="h-9 p-2 border border-gray-300 rounded-xl bg-gray-50 hover:bg-white focus:border-red-700"
+                    className="h-9 p-2 border border-gray-300 rounded-lg bg-gray-50 hover:bg-white focus:border-red-700"
                   />
                 </div>
                 <div className="flex flex-col justify-center align-middle text-start">
@@ -72,7 +73,7 @@ const Login = () => {
                     onChange={handleInput}
                     placeholder="Contraseña"
                     type="password"
-                    className="h-9 p-2 border border-gray-300 rounded-xl bg-gray-50 hover:bg-white focus:border-red-700"
+                    className="h-9 p-2 border border-gray-300 rounded-lg bg-gray-50 hover:bg-white focus:border-red-700"
                   />
                 </div>
                 <button
