@@ -64,7 +64,7 @@ const Register = () => {
                     onChange={handleInput}
                     type="text"
                     placeholder="Nombre y apellido"
-                    className="h-9 p-2 border border-gray-300 rounded-xl bg-gray-50 hover:bg-white focus:border-red-700"
+                    className="h-9 p-2 border border-gray-300 rounded-lg bg-gray-50 hover:bg-white focus:border-red-700"
                     // border-solid border-2
                   />
                 </div>
@@ -76,7 +76,7 @@ const Register = () => {
                     onChange={handleInput}
                     placeholder="Email"
                     type="text"
-                    className="h-9 p-2 border border-gray-300 rounded-xl bg-gray-50 hover:bg-white focus:border-red-700"
+                    className="h-9 p-2 border border-gray-300 rounded-lg bg-gray-50 hover:bg-white focus:border-red-700"
                   />
                 </div>
                 <div className="flex flex-col justify-center align-middle text-start">
@@ -87,7 +87,7 @@ const Register = () => {
                     onChange={handleInput}
                     placeholder="Número de teléfono"
                     type="text"
-                    className="h-9 p-2 border border-gray-300 rounded-xl bg-gray-50 hover:bg-white focus:border-red-700"
+                    className="h-9 p-2 border border-gray-300 rounded-lg bg-gray-50 hover:bg-white focus:border-red-700"
                   />
                 </div>
                 <div className="flex flex-col justify-center align-middle text-start">
@@ -98,7 +98,7 @@ const Register = () => {
                     onChange={handleInput}
                     placeholder="Contraseña"
                     type="text"
-                    className="h-9 p-2 border border-gray-300 rounded-xl bg-gray-50 hover:bg-white focus:border-red-700"
+                    className="h-9 p-2 border border-gray-300 rounded-lg bg-gray-50 hover:bg-white focus:border-red-700"
                   />
                 </div>
                 <div className="flex flex-col justify-center align-middle text-start">
@@ -109,7 +109,7 @@ const Register = () => {
                     onChange={handleInput}
                     placeholder="Repetir contraseña"
                     type="text"
-                    className="h-9 p-2 border border-gray-300 rounded-xl bg-gray-50 hover:bg-white focus:border-red-700"
+                    className="h-9 p-2 border border-gray-300 rounded-lg bg-gray-50 hover:bg-white focus:border-red-700"
                   />
                 </div>
                 <button
