@@ -1,18 +1,9 @@
 "use client";
 import React, { ChangeEvent, useState } from "react";
-import img1 from "../../assets/zyro-image(2).png";
-import img2 from "../../assets/zyro-image(3).png";
 import logo from "../../app/favicon.ico";
 import Image from "next/image";
 import { useParams, useRouter } from "next/navigation";
-import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import sanLuis from "../../assets/san-luis.jpg";
-import buenosAires from "../../assets/buenos-aires.jpg";
-import neuquen from "../../assets/neuquen.jpg";
-import cordoba from "../../assets/cordoba.jpg";
-import laPampa from "../../assets/la-pampa.jpg";
-import Header from "../Header";
 import InputFile from "./InputFile";
 
 const Procedure = () => {
