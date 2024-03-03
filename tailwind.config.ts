@@ -15,7 +15,7 @@ const config: Config = {
       },
       colors: {
         customRed: "#cb2320", // Agrega el color personalizado
-        transp: "rgb(255 255 255 / 85%)",
+        transp: "rgb(255 255 255 / 90%)",
         skyblue: "#93b0c4"
       },
       fontFamily: {
