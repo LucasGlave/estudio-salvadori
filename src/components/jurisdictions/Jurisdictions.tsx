@@ -1,23 +1,12 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import img1 from "../../assets/zyro-image(2).png";
-import img2 from "../../assets/wesley-tingey-KJgkqQcdynQ-unsplash.jpg";
 import sanLuis from "../../assets/san-luis.jpg";
 import buenosAires from "../../assets/buenos-aires.jpg";
 import neuquen from "../../assets/neuquen.jpg";
 import cordoba from "../../assets/cordoba.jpg";
 import laPampa from "../../assets/la-pampa.jpg";
-import laPampa2 from "../../assets/la-pampa2.jpeg";
-import laPampa3 from "../../assets/la-pampa3.jpeg";
-
-import logo from "../../app/favicon.ico";
-import Image from "next/image";
 import { useRouter } from "next/navigation";
-import Link from "next/link";
 import { motion, useAnimation, useInView } from "framer-motion";
-import Footer from "../Footer";
-import Header from "../Header";
-import MyAccount from "../MyAccount";
 
 const Jurisdictions = () => {
     const router = useRouter();
