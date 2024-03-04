@@ -13,7 +13,7 @@ const Header = () => {
             <h3>MI PERFIL</h3>
           </div>
           <div className="flex flex-row w-1/3 justify-evenly">
-            <Image src={logo} width={100} height={100} alt="logo" />
+            <Image src={logo} width={100} height={100} alt="logo" className="drop-shadow-xl filter" />
           </div>
           <div className="flex flex-row w-1/3 justify-evenly">
             <h3>NUEVA CONSULTA</h3>

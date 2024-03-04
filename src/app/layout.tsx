@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Oswald } from "next/font/google";
 import "./globals.css";
 import logo from "../app/favicon.ico";
 
-const inter = Inter({ subsets: ["latin"] });
+const oswald = Oswald({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Estudio Salvadori",
@@ -18,7 +18,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="custom-scroll">{children}</body>
+      <body className="custom-scroll">
+        <div className={oswald.className}>
+          {children}
+        </div>
+      </body>
     </html>
   );
 }
