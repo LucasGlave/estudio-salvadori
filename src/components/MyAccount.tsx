@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import Link from "next/link";
+import "@/styles/myAccount.css"
 
 const MyAccount = () => {
   const [formData, setFormData] = useState({
@@ -31,7 +32,7 @@ const MyAccount = () => {
       transition={{ duration: 1 }}
       className="flex items-center w-3/5 justify-center align-middle"
     >
-      <div className="flex flex-col h-7/8 w-full justify-center align-middle p-8 text-center border-spacing-12 border-8 border-white rounded-lg bg-white shadow-2xl shadow-gray-500">
+      <div className="flex flex-col h-7/8 w-full justify-center align-middle p-8 text-center border-spacing-12 border-8 border-white rounded-lg bg-white shadow-2xl shadow-gray-500 formContainer">
         <h2 className="text-xl font-montserrat mb-6 text-gray-500 font-bold">
           MI PERFIL
         </h2>

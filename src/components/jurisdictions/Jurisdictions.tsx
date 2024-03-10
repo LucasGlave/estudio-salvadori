@@ -1,3 +1,4 @@
+
 'use client';
 import React, { useEffect, useRef, useState } from 'react';
 import sanLuis from '../../assets/san-luis.jpg';

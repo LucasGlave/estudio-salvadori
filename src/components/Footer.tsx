@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import logo from "../app/favicon.ico";
+import "@/styles/footer.css"
 
 const Footer = () => {
   return (
@@ -21,7 +22,7 @@ const Footer = () => {
         className="flex flex-col bg-stone-600 opacity-90 justify-center gap-8
         text-center items-center text-sm p-5 w-full"
       >
-        <div className="flex flex-row gap-2 w-1/3 justify-center items-center font-montserrat font-semibold">
+        <div className="flex flex-row gap-2 w-1/3 justify-center items-center font-montserrat font-semibold footerOptions">
           <div className="w-1/3">
             <h3>MI PERFIL</h3>
           </div>
@@ -33,7 +34,7 @@ const Footer = () => {
           </div>
         </div>
         <div
-          className="flex flex-row w-1/2 justify-center items-center"
+          className="flex flex-row w-1/2 justify-center items-center footerInfo"
         >
           <div className="w-1/3 flex justify-center">
             <span>Software Develop</span>

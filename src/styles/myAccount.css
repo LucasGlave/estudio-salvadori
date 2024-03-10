@@ -1,0 +1,5 @@
+@media (max-width: 1010px) {
+  .formContainer {
+    min-width: 300px !important;
+  } 
+}
